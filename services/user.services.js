@@ -1,4 +1,5 @@
 const UserModel = require('../model/user.model');
+var jwt = require('jsonwebtoken');
 
 class userServices {
   static async registerUser(name, grade, board, email, password) {
