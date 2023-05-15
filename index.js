@@ -3,12 +3,12 @@ const db = require('./config/db');
 
 
 
-const port = 8000;
+const port = 27017;
 
 app.get('/', (req, res)=>{
     res.send('Hello World');
 });
 
 app.listen(port, ()=>{
-    console.log('Server listening on http://localhost:8000');
+    console.log(`Server listening on http://localhost:${port} `);
 });
