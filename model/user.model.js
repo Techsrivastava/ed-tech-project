@@ -1,5 +1,5 @@
 const UserService =require("../services/user.services");
-const { Schema } = require('mongoose');
+const { Schema, default: mongoose } = require('mongoose');
 const db = require("../config/db");
 const bcrypt = require("bcrypt");
 
@@ -60,5 +60,5 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
     }
 };
 
-const UserModel = db.model('user',userSchema);
+const UserModel = mongoose.model('user',userSchema);
 module.exports = UserModel;
